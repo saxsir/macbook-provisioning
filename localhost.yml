@@ -7,6 +7,61 @@
       - homebrew/dupes
       - caskroom/cask
       - sanemat/font
+    homebrew_packages:
+      - { name: gnu-tar, install_options: with-default-names }
+      - { name: sphinx-doc }
+      - { name: cmake }    # sphinx-doc
+      - { name: xz }
+      - { name: autoconf }
+      - { name: automake }    # xz, autoconf
+      - { name: pkg-config }
+      - { name: curl }    # pkg-config
+      - { name: makedepend }    # pkg-config
+      - { name: openssl }    # makedepend, 常に最新に（http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible）
+      - { name: openssl, state: linked, install_options: force }
+      - { name: libyaml }
+      - { name: ansible }    # libyaml, openssl
+      - { name: wget }    # xz, openssl
+      - { name: rsync }    # autoconf
+      - { name: coreutils }    # xz
+      - { name: bison }
+      - { name: oniguruma }
+      - { name: jq }    # bison, oniguruma
+      - { name: jpeg }
+      - { name: libtiff }    # jpeg
+      - { name: libtool }    # xz
+      - { name: libpng }    # xz
+      - { name: freetype }    # libpng
+      - { name: imagemagick }    # xz, pkg-config, libtool, jpeg, libpng, libtiff, freetype
+      - { name: siege }    # openssl
+      - { name: nmap }    # openssl
+      - { name: git }    # xz
+      - { name: go }    # git
+      - { name: ghq }    # git, go
+      - { name: peco }    # git, go
+      - { name: direnv }    # git, go
+      - { name: python }
+      - { name: vim, install_options: with-luajit, override-system-vi }    # python
+      - { name: gdbm }
+      - { name: pcre }
+      - { name: zsh, install_options: disable-etcdir }    # gdbm, pcre
+      - { name: doxygen }    # cmake
+      - { name: libevent }    # doxygen, pkg-config, openssl
+      - { name: tmux }    # pkg-config, libevent
+      - { name: reattach-to-user-namespace }
+      - { name: ruby-build }    # autoconf, pkg-config, openssl
+      - { name: rbenv }    # ruby-build
+      - { name: pyenv }    # autoconf, pkg-config
+      - { name: boost }
+      - { name: mysql }    # cmake, openssl, boost
+      - { name: readline }
+      - { name: sqlite }    # readline
+      - { name: tree }
+      - { name: lv }
+      - { name: nkf }
+      - { name: sl }
+      - { name: cmatrix }
+
   tasks:
     - name: homebrewのtapリポジトリを追加
       homebrew_tap: tap={{ item }} state=present
@@ -14,3 +69,21 @@
 
     - name: homebrew をアップデート
       homebrew: update_homebrew=yes
+
+    - name: brewパッケージをインストール
+      homebrew: >
+        name={{ item.name }}
+        state={{ item.state | default('latest') }}
+        install_options={{
+          item.install_options | default() | join(',')
+          if item.install_options is not string
+          else item.install_options
+        }}
+      with_items: homebrew_packages
+      register: brew_result
+    - name: brewパッケージの情報保存先ディレクトリを作成
+      file: path=brew_info state=directory
+    - name: brewパッケージの情報を保存
+      shell: brew info {{ item }} > brew_info/{{ item }}
+      with_items: brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+
