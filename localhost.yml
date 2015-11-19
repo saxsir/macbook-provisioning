@@ -110,11 +110,6 @@
       shell: brew cask info {{ item }} > cask_info/{{ item }}
       with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
 
-    - name: oh-my-zsh のインストール
-      shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-      args:
-        creates: ~/.oh-my-zsh/
-
     - name: xquartz のインストール (for Ricty)
       homebrew_cask: name=xquartz
     - name: fontforge のインストール (for Ricty)
