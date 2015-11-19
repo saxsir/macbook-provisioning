@@ -35,7 +35,10 @@ $ cd ~/.macbook-provisioning
 $ make install
 ```
 
-## App Storeから手作業で入れるアプリ
+---
+## 個人的に追加でやってる作業
+
+### App Storeから手作業でインストール
 - Dash 3
 - Deckset
 - Drop'n'Roll
@@ -47,3 +50,12 @@ $ make install
 - Slack
 - TweetDeck
 - WiFi Explorer
+
+### dotfilesを設置
+```
+$ git clone git@github.com:saxsir/dotfiles.git ~/.dotfiles
+$ cd .dotfiles
+$ ./install.sh OS=mac
+$ vim ~/.gitconfig
+# username, emailを編集
+```
