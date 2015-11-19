@@ -34,3 +34,16 @@ $ git clone git@github.com:saxsir/macbook-provisioning.git ~/.macbook-provisioni
 $ cd ~/.macbook-provisioning
 $ make install
 ```
+
+## App Storeから手作業で入れるアプリ
+- Dash 3
+- Deckset
+- Drop'n'Roll
+- Kobito
+- LastPass
+- LINE
+- Memory Clean
+- Skitch
+- Slack
+- TweetDeck
+- WiFi Explorer
