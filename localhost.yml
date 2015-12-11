@@ -63,11 +63,14 @@
       - { name: cmatrix }
     homebrew_cask_packages:
       - { name: adobe-reader }
+      - { name: appcleaner }
       - { name: atom }
       - { name: firefox }
+      - { name: gyazo }
       - { name: google-chrome }
       - { name: iterm2 }
       - { name: karabiner }
+      - { name: kindle }
       - { name: skype }
       - { name: vagrant }
       - { name: virtualbox }
