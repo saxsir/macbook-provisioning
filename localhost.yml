@@ -61,6 +61,7 @@
       - { name: nkf }
       - { name: sl }
       - { name: cmatrix }
+      - { name: heroku-toolbelt }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: appcleaner }
