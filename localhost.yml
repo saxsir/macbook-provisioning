@@ -62,6 +62,8 @@
       - { name: sl }
       - { name: cmatrix }
       - { name: heroku-toolbelt }
+      - { name: mecab }
+      - { name: mecab-ipadic }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: appcleaner }
