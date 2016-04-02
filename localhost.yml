@@ -64,6 +64,7 @@
       - { name: heroku-toolbelt }
       - { name: mecab }
       - { name: mecab-ipadic }
+      - { name: nodebrew }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: appcleaner }
