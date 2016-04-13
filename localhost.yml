@@ -78,6 +78,8 @@
       - { name: skype }
       - { name: vagrant }
       - { name: virtualbox }
+      - { name: flux }
+      - { name: rest }
 
 
   tasks:
