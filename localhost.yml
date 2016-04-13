@@ -1,12 +1,12 @@
 - hosts: localhost
   connection: local
   gather_facts: no    # 実行前に対象サーバの情報を収集する
-  sudo: no
+  become: no
   vars:
     homebrew_taps:
-      - homebrew/dupes
-      - caskroom/cask
-      - sanemat/font
+      - { name: homebrew/dupes }
+      - { name: caskroom/cask }
+      - { name: sanemat/font }
     homebrew_packages:
       - { name: gnu-tar, install_options: with-default-names }
       - { name: sphinx-doc }
@@ -84,8 +84,8 @@
 
   tasks:
     - name: homebrewのtapリポジトリを追加
-      homebrew_tap: tap={{ item }} state=present
-      with_items: homebrew_taps
+      homebrew_tap: tap={{ item.name }} state=present
+      with_items: "{{ homebrew_taps }}"
 
     - name: homebrew をアップデート
       homebrew: update_homebrew=yes
@@ -99,7 +99,7 @@
           if item.install_options is not string
           else item.install_options
         }}
-      with_items: homebrew_packages
+      with_items: "{{ homebrew_packages }}"
       register: brew_result
     - name: brewパッケージの情報保存先ディレクトリを作成
       file: path=brew_info state=directory
@@ -111,7 +111,7 @@
       homebrew: name=brew-cask state=latest
     - name: cask パッケージをインストール
       homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
-      with_items: homebrew_cask_packages
+      with_items: "{{ homebrew_cask_packages }}"
       register: cask_result
     - name: cask パッケージの情報保存先ディレクトリを作成
       file: path=cask_info state=directory
@@ -134,4 +134,3 @@
   handlers:
     - name: run fc-cache
       shell: fc-cache -vf
-
