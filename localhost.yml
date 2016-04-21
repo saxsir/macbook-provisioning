@@ -81,6 +81,7 @@
       - { name: virtualbox }
       - { name: flux }
       - { name: rest }
+      - { name: java }
 
 
   tasks:
