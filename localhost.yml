@@ -66,6 +66,7 @@
       - { name: mecab-ipadic }
       - { name: nodebrew }
       - { name: hub }
+      - { name: maven }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: appcleaner }
@@ -132,6 +133,9 @@
       args:
         creates: ~/Library/Fonts/Ricty-Bold.ttf
       notify: run fc-cache
+
+    - name: aws-cliのインストール
+      shell: pip install awscli
 
   handlers:
     - name: run fc-cache
