@@ -64,7 +64,6 @@
       - { name: heroku-toolbelt }
       - { name: mecab }
       - { name: mecab-ipadic }
-      - { name: nodebrew }
       - { name: hub }
     homebrew_cask_packages:
       - { name: adobe-reader }

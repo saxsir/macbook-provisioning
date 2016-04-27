@@ -50,6 +50,7 @@ $ make install
 - Slack
 - TweetDeck
 - WiFi Explorer
+- Rest
 
 ### dotfilesを設置
 ```
@@ -59,3 +60,7 @@ $ ./install.sh OS=mac
 $ vim ~/.gitconfig
 # username, emailを編集
 ```
+
+### 手動でインストール
+- nodebrew
+    - See https://github.com/hokaccha/nodebrew
