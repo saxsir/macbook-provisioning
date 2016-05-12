@@ -65,6 +65,7 @@
       - { name: mecab }
       - { name: mecab-ipadic }
       - { name: hub }
+      - { name: ctags }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: appcleaner }
@@ -80,6 +81,7 @@
       - { name: virtualbox }
       - { name: flux }
       - { name: java }
+      - { name: google-cloud-sdk}
 
 
   tasks:
