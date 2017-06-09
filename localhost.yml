@@ -64,9 +64,10 @@
       - { name: heroku-toolbelt }
       - { name: mecab }
       - { name: mecab-ipadic }
-      - { name: nodebrew }
       - { name: hub }
       - { name: maven }
+      - { name: ctags }
+      - { name: ag }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: appcleaner }
@@ -81,8 +82,8 @@
       - { name: vagrant }
       - { name: virtualbox }
       - { name: flux }
-      - { name: rest }
       - { name: java }
+      - { name: google-cloud-sdk}
 
 
   tasks:
