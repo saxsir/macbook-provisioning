@@ -64,3 +64,14 @@ $ vim ~/.gitconfig
 ### 手動でインストール
 - nodebrew
     - See https://github.com/hokaccha/nodebrew
+
+---
+
+## todo
+
+* alfred
+* karabiner
+* spectacle
+* docker for mac
+* todoist
+* lastpass
