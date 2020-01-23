@@ -11,9 +11,6 @@ fi
 brew bundle
 echo
 
-mackup restore
-echo
-
 scripts/initialize.sh
 echo
 
