@@ -34,16 +34,20 @@ $ make
 ---
 ## アプリケーションは手動インストール
 
-* cask使ってたけど更新ラグと二重管理がつらかったのでAppStoreで必要なやつ入れる
+* cask使ってたけどアップデートの反映ラグと二重管理がつらかったので管理外で必要なやつを入れる
 
-### とりあえず最初に入れとくやつ
+### AppStore
 - Alfred
-- Deckset
-- Dash
 - LastPass
+- bitwarden
 - Slack
 - TweetDeck
+- Todoist
+
+### 個別
+- Google Chrome
+- Deckset
+- Dash
 - Spectacle
 - Karabiner
 - Docker for Mac
-- Todoist
