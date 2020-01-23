@@ -37,7 +37,6 @@ $ make
 * cask使ってたけどアップデートの反映ラグと二重管理がつらかったので管理外で必要なやつを入れる
 
 ### AppStore
-- Alfred
 - LastPass
 - bitwarden
 - Slack
@@ -45,6 +44,7 @@ $ make
 - Todoist
 
 ### 個別
+- Alfred
 - Google Chrome
 - Deckset
 - Dash
