@@ -5,73 +5,45 @@ Macの開発環境構築スクリプト
 
 ## Setup
 
-### Xcode
+
 1. Install Xcode from Mac App Store
   - [https://developer.apple.com/jp/xcode/downloads/](https://developer.apple.com/jp/xcode/downloads/)
 
-### Homebrew
 ```
-$ xcode-select --install #GUIでウィンドウが表示されるのでライセンスを読んでインストールする
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew doctor
-$ brew update
+$ xcode-select --install
+$ sudo xcodebuild -license
 ```
 
-### Ansible
-```
-$ brew install ansible
-```
+2. リポジトリCloneする
 
-### SSH key
 ```
 $ ssh-keygen -t rsa
-$ cat .ssh/id_rsa.pub #コピーしてGitHubに登録
+
+...
+
+$ cat ~/.ssh/id_rsa.pub # GitHubに鍵登録
+$ git clone ssh://git@github.com/saxsir/macbook-provisioning
 ```
 
-## Provision
+3. make
+
 ```
-$ git clone git@github.com:saxsir/macbook-provisioning.git ~/.macbook-provisioning
-$ cd ~/.macbook-provisioning
-$ make install
+$ make
 ```
 
 ---
-## 個人的に追加でやってる作業
+## アプリケーションは手動インストール
 
-### App Storeから手作業でインストール
-- Dash 3
+* cask使ってたけど更新ラグと二重管理がつらかったのでAppStoreで必要なやつ入れる
+
+### とりあえず最初に入れとくやつ
+- Alfred
 - Deckset
-- Drop'n'Roll
-- Kobito
+- Dash
 - LastPass
-- LINE
-- Memory Clean
-- Skitch
 - Slack
 - TweetDeck
-- WiFi Explorer
-- Rest
-
-### dotfilesを設置
-```
-$ git clone git@github.com:saxsir/dotfiles.git ~/.dotfiles
-$ cd .dotfiles
-$ ./install.sh OS=mac
-$ vim ~/.gitconfig
-# username, emailを編集
-```
-
-### 手動でインストール
-- nodebrew
-    - See https://github.com/hokaccha/nodebrew
-
----
-
-## todo
-
-* alfred
-* karabiner
-* spectacle
-* docker for mac
-* todoist
-* lastpass
+- Spectacle
+- Karabiner
+- Docker for Mac
+- Todoist

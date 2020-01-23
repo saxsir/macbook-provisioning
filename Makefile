@@ -1,2 +1,7 @@
-install:
-	HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -i hosts -vv localhost.yml
+all:
+	./bootstrap.sh
+
+update:
+	brew update && brew upgrade && brew cleanup
+	&& upgrade_oh_my_zsh
+	&& vim -c PlugUpdate -c PlugClean -c exit -c exit
