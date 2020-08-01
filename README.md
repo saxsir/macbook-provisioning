@@ -51,3 +51,4 @@ $ make
 - Spectacle
 - Karabiner
 - Docker for Mac
+- Dropbox
