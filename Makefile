@@ -1,4 +1,6 @@
-all: $(HOME)/src/github.com/saxsir/dotfiles bootstrap 
+all: dotfiles bootstrap
+
+dotfiles: $(HOME)/src/github.com/saxsir/dotfiles
 	$(MAKE) -C $<
 
 bootstrap:
