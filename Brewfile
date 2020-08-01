@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "sanemat/font"
-
 brew "awscli"
 brew "cmatrix"
 brew "direnv"
