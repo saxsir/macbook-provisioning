@@ -1,9 +1,14 @@
-all: bootstrap dotfiles
+all: mackup
 
 bootstrap:
 	./bootstrap.sh
 
 dotfiles: $(HOME)/src/github.com/saxsir/dotfiles
+	# dotfilesの配置
+	make -C $@
+
+mackup: dotfiles bootstrap
+	mackup restore
 
 $(HOME)/src/github.com/saxsir/dotfiles:
 	mkdir -p $(@D)
