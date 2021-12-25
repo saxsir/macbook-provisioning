@@ -1,6 +1,6 @@
-all: dotfiles bootstrap
+all: dotfiles
 
-dotfiles: $(HOME)/src/github.com/saxsir/dotfiles
+dotfiles: $(HOME)/src/github.com/saxsir/dotfiles bootstrap
 	$(MAKE) -C $<
 
 bootstrap:
