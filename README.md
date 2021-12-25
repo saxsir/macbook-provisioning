@@ -37,18 +37,20 @@ $ make
 * cask使ってたけどアップデートの反映ラグと二重管理がつらかったので管理外で必要なやつを入れる
 
 ### AppStore
-- LastPass
-- bitwarden
+- Bitwarden
 - Slack
 - TweetDeck
-- Todoist
 
 ### 個別
 - Alfred
+  - [https://www.alfredapp.com](https://www.alfredapp.com)   
 - Google Chrome
-- Deckset
+  - [https://www.google.co.jp/chrome/](https://www.google.co.jp/chrome/)
 - Dash
+  - [https://kapeli.com/dash](https://kapeli.com/dash)
 - Spectacle
+  - [https://www.spectacleapp.com](https://www.spectacleapp.com)
 - Karabiner
-- Docker for Mac
+  -  [https://karabiner-elements.pqrs.org](https://karabiner-elements.pqrs.org)
 - Dropbox
+  - [https://www.dropbox.com/ja/install](https://www.dropbox.com/ja/install) 
