@@ -1,7 +1,6 @@
-all: dotfiles
+all: bootstrap dotfiles
 
-dotfiles: $(HOME)/src/github.com/saxsir/dotfiles bootstrap
-	$(MAKE) -C $<
+dotfiles: $(HOME)/src/github.com/saxsir/dotfiles
 
 bootstrap:
 	./bootstrap.sh
@@ -11,7 +10,5 @@ $(HOME)/src/github.com/saxsir/dotfiles:
 	mkdir -p $(@D)
 	git clone git@github.com:saxsir/dotfiles.git $@
 
-
 update:
-	brew update && brew upgrade && brew cleanup \
-	&& vim -c PlugUpdate -c PlugClean -c exit -c exit
+	brew update && brew upgrade && brew cleanup && brew bundle
