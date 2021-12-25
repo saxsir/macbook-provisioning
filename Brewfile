@@ -19,7 +19,6 @@ brew "jq"
 brew "lima"
 brew "lv"
 brew "mackup"
-brew "mas"
 brew "mysql-client"
 brew "nkf"
 brew "nmap"
@@ -43,10 +42,3 @@ brew "zsh"
 brew "rhysd/actionlint/actionlint"
 brew "sanemat/font/ricty"
 cask "aws-vault"
-cask "blackhole"
-cask "chromedriver"
-mas "Bitwarden", id: 1352778147
-mas "LINE", id: 539883307
-mas "ScreenBrush", id: 1233965871
-mas "TweetDeck", id: 485812721
-mas "Xcode", id: 497799835
