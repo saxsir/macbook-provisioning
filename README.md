@@ -7,7 +7,7 @@ Macの開発環境構築スクリプト
 
 
 1. Install Xcode from Mac App Store
-  - [https://developer.apple.com/jp/xcode/downloads/](https://developer.apple.com/jp/xcode/downloads/)
+  - [https://apps.apple.com/jp/app/xcode/id497799835](https://apps.apple.com/jp/app/xcode/id497799835/)
 
 ```
 $ xcode-select --install
