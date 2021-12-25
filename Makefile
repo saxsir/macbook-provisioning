@@ -12,3 +12,6 @@ $(HOME)/src/github.com/saxsir/dotfiles:
 
 update:
 	brew update && brew upgrade && brew cleanup && brew bundle
+
+lockfile:
+	brew bundle --dump
