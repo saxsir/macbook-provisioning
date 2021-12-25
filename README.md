@@ -54,3 +54,5 @@ $ make
   -  [https://karabiner-elements.pqrs.org](https://karabiner-elements.pqrs.org)
 - Dropbox
   - [https://www.dropbox.com/ja/install](https://www.dropbox.com/ja/install) 
+- Krisp
+  - [https://krisp.ai](https://krisp.ai) 
