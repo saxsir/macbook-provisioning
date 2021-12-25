@@ -38,8 +38,6 @@ $ make
 
 ### AppStore
 
-※masで管理するようにしたのでAppStoreからのインストールは不要かも
-
 - Bitwarden
 - Slack
 - TweetDeck
@@ -53,12 +51,11 @@ $ make
   - [https://www.google.co.jp/chrome/](https://www.google.co.jp/chrome/)
 - Dash
   - [https://kapeli.com/dash](https://kapeli.com/dash)
-- Spectacle
-  - [https://www.spectacleapp.com](https://www.spectacleapp.com)
 - Karabiner
   -  [https://karabiner-elements.pqrs.org](https://karabiner-elements.pqrs.org)
 - Dropbox
   - [https://www.dropbox.com/ja/install](https://www.dropbox.com/ja/install) 
 - Krisp
   - [https://krisp.ai](https://krisp.ai) 
- 
+- Rectangle
+  - [https://rectangleapp.com/](https://rectangleapp.com/) 
