@@ -9,6 +9,8 @@ if ! command -v brew >/dev/null 2>&1; then
   echo
 fi
 brew bundle
+brew update
+brew upgrade
 echo
 
 scripts/initialize.sh
