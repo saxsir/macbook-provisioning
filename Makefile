@@ -5,7 +5,7 @@ bootstrap:
 
 dotfiles: $(HOME)/src/github.com/saxsir/dotfiles
 	# dotfilesの配置
-	make -C $@
+	make -C $<
 
 mackup: dotfiles bootstrap
 	mackup restore
