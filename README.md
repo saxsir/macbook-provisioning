@@ -37,6 +37,9 @@ $ make
 * cask使ってたけどアップデートの反映ラグと二重管理がつらかったので管理外で必要なやつを入れる
 
 ### AppStore
+
+※masで管理するようにしたのでAppStoreからのインストールは不要かも
+
 - Bitwarden
 - Slack
 - TweetDeck
