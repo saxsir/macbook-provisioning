@@ -40,6 +40,8 @@ $ make
 - Bitwarden
 - Slack
 - TweetDeck
+- ScreenBrush
+- Xcode
 
 ### 個別
 - Alfred
@@ -56,3 +58,4 @@ $ make
   - [https://www.dropbox.com/ja/install](https://www.dropbox.com/ja/install) 
 - Krisp
   - [https://krisp.ai](https://krisp.ai) 
+ 
