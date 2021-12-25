@@ -25,6 +25,10 @@ $ cat ~/.ssh/id_rsa.pub # GitHubに鍵登録
 $ git clone ssh://git@github.com/saxsir/macbook-provisioning
 ```
 
+3. Dropboxのインストール
+
+mackupのbackup先がdropboxなので先に入れておく
+
 3. make
 
 ```
