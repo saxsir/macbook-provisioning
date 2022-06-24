@@ -44,11 +44,11 @@ $ make
 
 - Bitwarden
 - Slack
-- TweetDeck
 - ScreenBrush
 - Xcode
 
 ### 個別
+
 - Alfred
   - [https://www.alfredapp.com](https://www.alfredapp.com)   
 - Google Chrome
