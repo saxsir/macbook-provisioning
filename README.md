@@ -49,8 +49,8 @@ $ make
 
 ### 個別
 
-- Alfred
-  - [https://www.alfredapp.com](https://www.alfredapp.com)   
+- Raycast
+  - [https://www.raycast.com/)   
 - Google Chrome
   - [https://www.google.co.jp/chrome/](https://www.google.co.jp/chrome/)
 - Dash
@@ -61,5 +61,3 @@ $ make
   - [https://www.dropbox.com/ja/install](https://www.dropbox.com/ja/install) 
 - Krisp
   - [https://krisp.ai](https://krisp.ai) 
-- Rectangle
-  - [https://rectangleapp.com/](https://rectangleapp.com/) 
