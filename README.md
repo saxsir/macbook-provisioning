@@ -50,7 +50,7 @@ $ make
 ### 個別
 
 - Raycast
-  - [https://www.raycast.com/)   
+  - [https://www.raycast.com/](https://www.raycast.com/)
 - Google Chrome
   - [https://www.google.co.jp/chrome/](https://www.google.co.jp/chrome/)
 - Dash
@@ -58,6 +58,8 @@ $ make
 - Karabiner
   -  [https://karabiner-elements.pqrs.org](https://karabiner-elements.pqrs.org)
 - Dropbox
-  - [https://www.dropbox.com/ja/install](https://www.dropbox.com/ja/install) 
+  - [https://www.dropbox.com/ja/install](https://www.dropbox.com/ja/install)
 - Krisp
-  - [https://krisp.ai](https://krisp.ai) 
+  - [https://krisp.ai](https://krisp.ai)
+- Todoist
+  - [https://todoist.com/ja/downloads](https://todoist.com/ja/downloads)
