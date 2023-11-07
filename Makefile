@@ -18,4 +18,4 @@ update:
 	brew update && brew upgrade && brew cleanup
 
 update-lockfile:
-	brew bundle dump
+	brew bundle dump --force
