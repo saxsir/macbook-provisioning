@@ -63,3 +63,14 @@ $ make
   - [https://krisp.ai](https://krisp.ai)
 - Todoist
   - [https://todoist.com/ja/downloads](https://todoist.com/ja/downloads)
+
+---
+
+## あとこの辺やる設定
+
+- Macのキーボードショートカット変更
+    - システム環境設定 → キーボード → キーボードショートカット
+        - Spotlight
+            - 無効に（Raycastでやるので）
+        - 入力ソース
+            - ctrl + space を cmd + spaceに  
