@@ -63,6 +63,8 @@ $ make
   - [https://krisp.ai](https://krisp.ai)
 - Todoist
   - [https://todoist.com/ja/downloads](https://todoist.com/ja/downloads)
+- JetBrains Toolbox
+  - [https://www.jetbrains.com/ja-jp/toolbox-app/](https://www.jetbrains.com/ja-jp/toolbox-app/) 
 
 ---
 
