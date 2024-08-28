@@ -11,6 +11,8 @@ fi
 brew bundle
 echo
 
+# TODO. Install aws ssm plugin
+
 scripts/initialize.sh
 echo
 

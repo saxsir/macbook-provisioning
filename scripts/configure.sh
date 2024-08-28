@@ -2,6 +2,9 @@
 
 set -e
 
+echo "外観設定"
+defaults write -g AppleInterfaceStyle -string 'Dark'
+
 echo "キーボード設定..."
 defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 2
