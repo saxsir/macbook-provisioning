@@ -1,78 +1,77 @@
-tap "aws/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask-versions"
+# Homebrew で入れるものはこのファイルが唯一の正 (dotfiles 側には置かない)。
+# 依存で入るライブラリは書かない (brew bundle dump の出力を貼らない)。
+# 追加は `brew bundle add <formula>` か手で追記する。
+
 tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
-tap "sanemat/font"
-tap "songmu/tap"
-brew "apr-util"
-brew "awscli"
-brew "berkeley-db", link: true
-brew "node"
-brew "bitwarden-cli"
-brew "glib"
-brew "cmatrix"
-brew "ruby"
-brew "cocoapods"
-brew "coreutils"
-brew "openldap"
-brew "curl"
-brew "direnv"
-brew "docker"
-brew "docker-buildx"
-brew "firebase-cli"
-brew "harfbuzz"
-brew "pango"
-brew "fontforge"
-brew "freetds"
-brew "fzf"
-brew "gcc"
-brew "gd"
-brew "gh"
-brew "ghostscript"
-brew "ghq"
-brew "git"
-brew "git-secrets"
-brew "gnutls"
-brew "gobject-introspection"
-brew "shared-mime-info"
-brew "libheif"
-brew "imagemagick"
-brew "jq"
-brew "krb5"
-brew "libfido2"
-brew "libslirp"
-brew "qemu"
-brew "lima"
-brew "lv"
-brew "mackup"
-brew "mysql-client"
-brew "nkf"
-brew "nmap"
-brew "nodebrew"
-brew "openjdk"
+
+# dotfiles (chezmoi) 本体と、dotfiles が前提にするもの
+brew "chezmoi"
+brew "age"             # chezmoi の secret 暗号化 (age-keygen も同梱)
+brew "starship"        # プロンプト
+brew "mise"            # 言語ランタイム / CLI バージョン管理 (~/.config/mise/config.toml)
+brew "direnv"          # プロジェクト単位の環境変数。devbox は core に無いので curl で別途導入
+brew "pre-commit"      # dotfiles の secretlint hook
+brew "oven-sh/bun/bun" # secretlint を bunx で動かす
+brew "node"            # mise 外の system node を触るツール向け
+
+# シェル / CLI (zshrc の関数・alias が依存)
+brew "zsh"
+brew "coreutils"       # GNU date 等。~/.zsh/macos.rc.zsh で gnubin を PATH に追加
 brew "peco"
-brew "percona-toolkit"
-brew "php"
-brew "php-cs-fixer"
-brew "php@8.1"
-brew "pipenv"
-brew "protobuf"
-brew "pyenv"
-brew "python@3.10"
-brew "reattach-to-user-namespace"
-brew "rename"
-brew "ripgrep"
-brew "ruby-build"
-brew "tmux"
+brew "fzf"
+brew "ghq"
+brew "cmatrix"
+brew "lv"
 brew "tree"
-brew "vim"
 brew "watch"
 brew "wget"
-brew "yarn"
+brew "rename"
+brew "nkf"
+brew "jq"
 brew "yq"
-brew "zsh"
-brew "aws/tap/copilot-cli"
+brew "ripgrep"         # nvim mini.pick の grep_live も使う
+
+# エディタ / ファイラ
+brew "neovim"          # $EDITOR / alias vim='nvim'
+brew "vim"
+brew "yazi"
+
+# Git / GitHub
+brew "git"
+brew "git-lfs"         # dot_gitconfig.tmpl の [filter "lfs"] required = true
+brew "git-secrets"
+brew "gh"
+brew "k1LoW/tap/git-wt" # git wt <branch> で worktree 作成 / 切り替え
+brew "crit"            # crit skill (dotfiles の apm.yml) が呼ぶ CLI
 brew "rhysd/actionlint/actionlint"
-brew "sanemat/font/ricty"
+
+# AWS
+brew "awscli"
+brew "aws-vault"       # cask ではなく formula (dotfiles 側の判断に揃えた)
+brew "aws/tap/copilot-cli"
+
+# コンテナ / VM
+brew "docker"
+brew "docker-buildx"
+brew "lima"            # claude-vm alias
+brew "qemu"
+
+# 開発ツール
+brew "gcc"
+brew "protobuf"
+brew "openjdk"
+brew "pipenv"
+brew "yarn"
+brew "php-cs-fixer"
+brew "percona-toolkit"
+brew "nmap"
+brew "imagemagick"
+brew "firebase-cli"
+brew "bitwarden-cli"
 brew "songmu/tap/blogsync"
-cask "aws-vault"
+
+# ターミナルフォント (~/.config/ghostty/config で Moralerspace Neon JPDOC を指定)
+# Moralerspace = Monaspace + IBM Plex Sans JP の等幅派生。-jpdoc は「」、。等の全角記号を JP 側で描画する
+cask "font-moralerspace-jpdoc"
+# Moralerspace の JPDOC が拾わない ①②③ を全角描画するため (font-codepoint-map で使用)。同じ IBM Plex Sans JP なので字形が揃う
+cask "font-ibm-plex-sans-jp"

@@ -1,7 +1,4 @@
-all: mackup
-
-mackup: bootstrap dotfiles
-	mackup restore
+all: bootstrap dotfiles
 
 bootstrap:
 	./bootstrap.sh
@@ -16,6 +13,3 @@ $(HOME)/src/github.com/saxsir/dotfiles:
 
 update:
 	brew update && brew upgrade && brew cleanup
-
-update-lockfile:
-	brew bundle dump --force
