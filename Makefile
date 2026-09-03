@@ -1,7 +1,4 @@
-all: mackup
-
-mackup: bootstrap dotfiles
-	mackup restore
+all: bootstrap dotfiles
 
 bootstrap:
 	./bootstrap.sh

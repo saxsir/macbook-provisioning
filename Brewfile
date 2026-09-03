@@ -69,7 +69,6 @@ brew "imagemagick"
 brew "firebase-cli"
 brew "bitwarden-cli"
 brew "songmu/tap/blogsync"
-brew "mackup"
 
 # ターミナルフォント (~/.config/ghostty/config で Moralerspace Neon JPDOC を指定)
 # Moralerspace = Monaspace + IBM Plex Sans JP の等幅派生。-jpdoc は「」、。等の全角記号を JP 側で描画する
