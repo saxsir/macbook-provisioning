@@ -52,9 +52,10 @@ $ make
 `make update` で Homebrew の update / upgrade / cleanup を行う。
 
 ---
-## アプリケーションは手動インストール
+## 一部のアプリケーションは手動インストール
 
-* cask使ってたけどアップデートの反映ラグと二重管理がつらかったので管理外で必要なやつを入れる
+* 自動更新を持つ GUI アプリは cask 管理外にする (アップデートの反映ラグと二重管理がつらいため)
+* 自動更新を持たないもの (フォント、CLI 寄りの cask、godot) は Brewfile の `cask` で入れる
 
 ### AppStore
 
