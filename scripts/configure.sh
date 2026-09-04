@@ -47,14 +47,6 @@ mkdir -p "${HOME}/Pictures/Screenshots"
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 # ============================================================
-# Safari (開発者向け)
-# ============================================================
-# 開発メニューと内部デバッグメニューを表示
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-# ============================================================
 # cmux
 # ============================================================
 # cmux.json スキーマ外の beta フラグはここで固定する (schema 内の設定は
@@ -62,6 +54,19 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.cmuxterm.app "customSidebars.beta.enabled" -bool true
 defaults write com.cmuxterm.app "rightSidebar.beta.dock.enabled" -bool true
 defaults write com.cmuxterm.app "rightSidebar.beta.feed.enabled" -bool true
+
+# ============================================================
+# Safari (開発者向け)
+# ============================================================
+# 開発メニューと内部デバッグメニューを表示
+# ターミナルに Safari のコンテナへのアクセス権が無いと defaults write が失敗するので、失敗しても続行する
+if ! {
+  defaults write com.apple.Safari IncludeDevelopMenu -bool true &&
+  defaults write com.apple.Safari IncludeInternalDebugMenu -bool true &&
+  defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+}; then
+  echo "[configure] Safari の defaults は書けなかった (システム設定 > プライバシーとセキュリティで許可してから再実行)"
+fi
 
 # ============================================================
 # 反映 (該当プロセスを再起動)
