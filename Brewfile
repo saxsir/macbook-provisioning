@@ -2,8 +2,6 @@
 # 依存で入るライブラリは書かない (brew bundle dump の出力を貼らない)。
 # 追加は `brew bundle add <formula>` か手で追記する。
 
-tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
-
 # dotfiles (chezmoi) 本体と、dotfiles が前提にするもの
 brew "chezmoi"
 brew "age"             # chezmoi の secret 暗号化 (age-keygen も同梱)
@@ -43,7 +41,7 @@ brew "git-secrets"
 brew "gh"
 brew "k1LoW/tap/git-wt" # git wt <branch> で worktree 作成 / 切り替え
 brew "crit"            # crit skill (dotfiles の apm.yml) が呼ぶ CLI
-brew "rhysd/actionlint/actionlint"
+brew "actionlint"       # GitHub Actions workflow の lint (homebrew/core にある)
 
 # AWS
 brew "awscli"
