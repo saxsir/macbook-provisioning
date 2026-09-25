@@ -11,6 +11,7 @@ brew "direnv"          # プロジェクト単位の環境変数。devbox は co
 brew "pre-commit"      # dotfiles の secretlint hook
 brew "oven-sh/bun/bun" # secretlint を bunx で動かす
 brew "node"            # mise 外の system node を触るツール向け
+brew "apm"             # Agent Package Manager。dotfiles の make apm が ~/.apm/apm.yml の skill を deploy する
 
 # シェル / CLI (zshrc の関数・alias が依存)
 brew "zsh"
