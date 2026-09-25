@@ -7,7 +7,8 @@ Macの開発環境構築スクリプト
 
 このリポジトリは OS 層 (Xcode Command Line Tools、Homebrew と Brewfile、
 macOS defaults、gh extension) のセットアップを担う。dotfiles とそれを
-読んで動くもの (chezmoi apply / mise / apm) は saxsir/dotfiles が担う。
+読んで動くもの (chezmoi apply / mise / apm の skill deploy) は saxsir/dotfiles が担う。
+apm CLI 自体は Brewfile で入れる。
 
 Homebrew のパッケージ一覧はこのリポジトリの Brewfile が唯一の正。
 新規マシンではこのリポジトリを先に実行する (dotfiles 単体では
