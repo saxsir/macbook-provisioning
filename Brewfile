@@ -67,6 +67,7 @@ brew "docker-credential-helper"
 brew "lima"            # claude-vm alias
 brew "colima"          # lima 上の Docker ランタイム (Docker Desktop の代わり)
 brew "qemu"
+brew "kubernetes-cli"  # kubectl
 
 # 開発ツール
 brew "gcc"
