@@ -8,6 +8,13 @@ if ! command -v brew >/dev/null 2>&1; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+# サードパーティ tap の formula は trust しないと Homebrew が読み込まない。brew bundle は trust を扱わないので先に済ませる
+# Brewfile の brew "user/tap/formula" をすべて拾う (二重に trust しても害はない)
+third_party_formulae=$(grep -oE '^brew "[^"/]+/[^"/]+/[^"]+"' Brewfile | sed -E 's/^brew "(.*)"$/\1/')
+if [ -n "$third_party_formulae" ]; then
+  # shellcheck disable=SC2086
+  brew trust --formula $third_party_formulae
+fi
 brew bundle
 echo
 
