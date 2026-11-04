@@ -1,6 +1,7 @@
 # Homebrew で入れるものはこのファイルが唯一の正 (dotfiles 側には置かない)。
 # 依存で入るライブラリは書かない (brew bundle dump の出力を貼らない)。
 # 追加は `brew bundle add <formula>` か手で追記する。
+# サードパーティ tap の formula は "user/tap/formula" の形で書く。bootstrap.sh がこの形を拾って brew trust する。
 
 # dotfiles (chezmoi) 本体と、dotfiles が前提にするもの
 brew "chezmoi"
@@ -57,6 +58,7 @@ brew "aws-sam-cli"
 # クラウド / データ基盤
 brew "hashicorp/tap/terraform"
 brew "oauth2l"         # OAuth2 アクセストークン取得 CLI
+brew "lightdash/lightdash/lightdash" # Lightdash CLI
 cask "gcloud-cli"
 
 # コンテナ / VM
@@ -88,6 +90,7 @@ brew "perl"
 brew "firebase-cli"
 brew "bitwarden-cli"
 cask "godot"
+brew "lambdalisue/cclens/cclens" # Claude Code の利用状況ビューア
 
 # ターミナルフォント (~/.config/ghostty/config で Moralerspace Neon JPDOC を指定)
 # Moralerspace = Monaspace + IBM Plex Sans JP の等幅派生。-jpdoc は「」、。等の全角記号を JP 側で描画する
