@@ -44,6 +44,7 @@ brew "reattach-to-user-namespace" # tmux から macOS のクリップボード�
 # Git / GitHub
 brew "git"
 brew "git-lfs"         # dot_gitconfig.tmpl の [filter "lfs"] required = true
+brew "git-secrets"     # dotfiles の init.templateDir の hook が呼ぶ。無いと新規リポジトリで commit が失敗する
 brew "gh"
 brew "jj"              # Jujutsu (git 互換の VCS)
 brew "k1LoW/tap/git-wt" # git wt <branch> で worktree 作成 / 切り替え
